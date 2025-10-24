@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Kristina Pianykh</title>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+  <div class="sticky-bar">
+    <div class="sticky-bar-container">
+      <nav>
+      <a href="#about">About Me</a>
+      <a href="#repositories">GitHub Repositories</a>
+      <a href="#journey">Professional Journey</a>
+      <a href="#open-source">Open Source</a>
+      <a href="#blog-posts">Blog Posts</a>
+      <a href="#certificates">Certificates</a>
+      <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </div>
+
+<header id="about" class="profile-header">
+  <div class="container">
+
+      <!-- LEFT: Photo and name -->
+      <div class="profile-left">
+        <div class="photo-container">
+          <img src="photo.jpg" alt="Kristina Pianykh" class="profile-photo" />
+        </div>
+        <h1 class="username">kristina_pianykh</h1>
+        <!-- <p class="title">Software Engineer</p> -->
+        <!-- <p class="company">@ Flink</p> -->
+        <p class="role">Software Engineer @ Flink</p>
+        <p class="university">
+          B.Sc. Computer Science • University of Berlin
+        </p>
+<p class="location">
+  <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18"
+       viewBox="0 0 24 24" fill="none" stroke="currentColor"
+       stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M12 21s-6-5.686-6-10A6 6 0 0 1 18 11c0 4.314-6 10-6 10z" />
+    <circle cx="12" cy="11" r="2" />
+  </svg>
+  Berlin, Germany
+</p>
+      </div>
+
+      <div class="about-container">
+        <div class="about-container-inner">
+        <div class="about-card">
+          <p class="section-label">~ /about</p>
+          <p class="about-card-white">Software engineer passionate about building developer tools that don’t suck ass.</p>
+          <p class="about-card-gray">I like systems programming, distributed architectures, and developer workflows that feel effortless.</p>
+          <p class="about-card-white">When I’m not busy breaking things in Neovim on Arch Linux (btw), I’m exploring declarative environments with Nix.</p>
+        </div>
+
+        <!-- <div class="stats"> -->
+        <!--   <div class="stat"> -->
+        <!--     <h3>3+</h3> -->
+        <!--     <p>years coding</p> -->
+        <!--   </div> -->
+        <!--   <div class="stat"> -->
+        <!--     <h3>∞</h3> -->
+        <!--     <p>CLI commands run</p> -->
+        <!--   </div> -->
+        <!--   <div class="stat"> -->
+        <!--     <h3>42</h3> -->
+        <!--     <p>projects tinkered</p> -->
+        <!--   </div> -->
+        <!-- </div> -->
+
+        <p class="tip">tip: use <code>j/k</code> to scroll, <code>gg/G</code> for top/bottom</p>
+      </div>
+    </div>
+  </div>
+</header>
+    <main>
+
+    <div class ="section-container-surface">
+      <section id="repositories">
+        <div class="container">
+          <h2>> Selected GitHub Repositories</h2>
+          <div class="cards">
+            <!-- go-shell -->
+            <div class="card">
+              <a href="https://github.com/Kristina-Pianykh/go-shell" target="_blank">
+                <h3>Go Shell</h3>
+              </a>
+              <p>A UNIX-style shell written in Go — supports builtins, pipes, redirection, autocomplete, and signal handling. Built as a playground to explore OS-level concepts the “UNIX way.”</p>
+              <p class="note">
+                <a href="https://kristina-pianykh.github.io/blog/posts/shell/" target="_blank">
+                  Read the blog post →
+                </a>
+              </p>
+              <div class="tags">
+                <span>Go</span><span>UNIX</span>
+              </div>
+            </div>
+
+            <!-- RISC-V emulator -->
+            <div class="card">
+              <a href="https://github.com/Kristina-Pianykh/RISC-V-emulator" target="_blank">
+                <h3>RISC-V Emulator</h3>
+              </a>
+              <p>A simple 32-bit RISC-V CPU emulator in C. Supports instruction parsing, memory-mapped I/O, and debugging.</p>
+              <div class="tags">
+                <span>C</span><span>Assembly</span>
+              </div>
+            </div>
+
+            <!-- IoT distributed event processing -->
+            <div class="card">
+              <a href="https://github.com/Kristina-Pianykh/iot_distributed_event_processing" target="_blank">
+                <h3>IoT Distributed Event Processing</h3>
+              </a>
+              <p>Event processing system in a cluster of Raspberry Pis and smartwatches with Dockerized services and SQL-like queries.</p>
+              <div class="tags">
+                <span>Python</span><span>C++</span><span>Docker</span>
+              </div>
+            </div>
+
+            <!-- Flink multinode -->
+            <div class="card">
+              <a href="https://github.com/Kristina-Pianykh/flink-multinode" target="_blank">
+                <h3>Flink Multinode</h3>
+              </a>
+              <p>A wrapper for Apache Flink CEP enabling adaptive deployment of event evaluation queries in distributed environment.</p>
+              <div class="tags">
+                <span>Java</span><span>Apache Flink</span><span>Docker</span>
+              </div>
+            </div>
+
+            <!-- Diffie-Hellman hash collisions -->
+            <div class="card">
+              <a href="https://github.com/Kristina-Pianykh/dh-hash-collisions-rs" target="_blank">
+                <h3>DH Hash Collisions</h3>
+              </a>
+              <p>Variation of the birthday attack on Diffie–Hellman exchange, exploring cryptographic runtimes in Rust.</p>
+              <div class="tags">
+                <span>Rust</span><span>Python</span>
+              </div>
+            </div>
+
+            <!-- Terraform AWS infra -->
+            <div class="card">
+              <a href="https://github.com/Kristina-Pianykh/terraform-aws-test-infrastructure" target="_blank">
+                <h3>AWS Test Infrastructure</h3>
+              </a>
+              <p>A Terraform-based toy AWS environment with autoscaling EC2s, RDS, SQS buffering, and GitHub Actions deploys.</p>
+              <div class="tags">
+                <span>Terraform</span><span>AWS</span><span>Python</span>
+              </div>
+            </div>
+          </div>
+
+          <p class="more-link">
+            <a href="https://github.com/Kristina-Pianykh" target="_blank">
+              → More repositories on GitHub
+            </a>
+          </p>
+        </div>
+      </section>
+    </div>
+
+    <div class ="section-container-base">
+      <section id="journey">
+        <div class="container">
+          <h2>> Professional Journey</h2>
+
+          <div class="row-cards">
+            <div class="workplace-card">
+
+              <!-- <div class="contrib-image"> -->
+              <!--   <img src="./flink/logo-cropped.png" alt="Flink logo"/> -->
+              <!-- </div> -->
+
+              <div class="contrib-content">
+                <details>
+                  <summary>
+                    <div class=workplace-header>
+                      <h3>$ Platform Engineer</h3>
+                      <p class="subtle">
+                         <a href="https://www.goflink.com/en-DE/" target="_blank">Flink</a>, Berlin | Since 04/2025
+                      </p>
+                    </div>
+                    <p class="text">
+                      Developer Experience, Internal Tooling, Observability, Load Testing, Workflow Automation
+                    </p>
+                  </summary>
+
+                  <div class="bullet-list">
+                    <ul>
+                      <li>Built an internal platform for distributed load testing Grafana’s <a style="text-decoration: underline;" href="https://k6.io/" target="_blank"><code>k6</code></a> within Kubernetes. It helps our teams simulate realistic HTTP and gRPC traffic patterns, track latency against SLOs, and catch performance issues early. I integrated a new HTMX-based web interface into our existing Flask portal, making it easy to configure and launch tests directly from the browser without requiring direct CLI or API interaction.</li>
+                      <li>Introduced resource governance for Kubernetes workloads with Resource Quotas and Limit Ranges to ensure fair resource allocation, stable performance, and no noisy neighbours.</li>
+                      <li>Moderated recurring cross-team meetings as part of the <em><em>Keep the Lights On</em></em> initiative focused on incident and postmortem reviews. Coordinated with engineers and incident owners to ensure thorough follow-ups, effective knowledge sharing, and a constructive, blame-free discussion culture that improves system reliability and observability.</li>
+                    </ul>
+                    <div class="tags">
+                      <span>Go</span><span>Python</span><span>Kubernetes</span><span>GCP</span><span>Helm</span><span>ArgoCD</span><span>HTMX</span><span>Docker</span><span>DataDog</span>
+                    </div>
+                  </div>
+
+                </details>
+              </div>
+            </div>
+
+            <div class="workplace-card">
+              <!-- <div class="contrib-image"> -->
+              <!--   <img src="./diconium-logo.png" alt="Diconium logo"/> -->
+              <!-- </div> -->
+
+              <div class="contrib-content">
+                <details>
+                  <summary>
+                    <div class=workplace-header>
+                      <h3>$ Cloud Architect</h3>
+                      <p class="subtle">
+                      <a href="https://diconium.com/en/" target="_blank">Diconium</a>, Berlin | 10/2022 – 11/2024
+                      </p>
+                    </div>
+                    <p class="text">
+                      CI/CD Automation, Cloud Infrastructure, DevOps, Data Engineering
+                    </p>
+                  </summary>
+
+                  <div class="bullet-list">
+                    <ul>
+                      <li>Optimized the costs of CI/CD pipelines on GitHub by setting up cache, leading to a 90% decrease in billable time.</li>
+                      <li>Built a load testing service in Python that generated realistic test data to emulate user traffic peaks at scheduled times.</li>
+                      <li>Built an automated key rotation and notification service on AWS to eliminate manual credential management and reduce operational risk.</li>
+                      <li>Designed, implemented, and automated the infrastructure for an AI assistant on Microsoft Azure using <code>Terraform</code> for Infrastructure as Code and GitHub Workflows/BitBucket Pipeline for continuous delivery.</li>
+                      <li>Led workshops on coding standards and secure development practices, enabling teams to adopt tools such as <code>uv</code>, <code>Poetry</code>, <code>mypy</code>, and <code>Ruff</code>, and to apply proper secret management in Dockerized environments.</li>
+                    </ul>
+                    <div class="tags">
+                      <span>Python</span><span>IaC</span><span>Terraform</span><span>Docker</span><span>AWS</span><span>Microsoft Azure</span><span>CI/CD</span><span>GitHub Actions</span><span>BitBucket</span></span>
+                    </div>
+                  </div>
+
+                </details>
+              </div>
+            </div>
+
+            <div class="workplace-card">
+              <!-- <div class="contrib-image"> -->
+              <!--   <img src="./delphai-logo.svg" id="delphai" alt="Delphai logo"/> -->
+              <!-- </div> -->
+
+              <div class="contrib-content">
+                <details>
+                  <summary>
+                    <div class=workplace-header>
+                      <h3>$ Software Engineer</h3>
+                      <p class="subtle">
+                       <a href="https://www.delphai.com/" target="_blank">Delphai</a>, Berlin | 10/2021 – 10/2022
+                      </p>
+                    </div>
+                    <p class="text">
+                      Backend Development, Data Pipelines, API Design, Microservices
+                    </p>
+                  </summary>
+
+                  <div class="bullet-list">
+                    <ul>
+                      <li>Built automated scripts for extracting and parsing web data, deployed within a containerized environment.</li>
+                      <li>Designed APIs to integrate with MongoDB and gRPCs microservices.</li>
+                      <li>Built a REST API by leveraging serverless services on Azure.</li>
+                      <li>Optimized the data processing pipelines powered with Kafka.</li>
+                    </ul>
+                    <div class="tags">
+                      <span>Python</span><span>gRPC</span><span>Azure functions</span><span>Kafka</span><span>MongoDB</span>
+                    </div>
+                  </div>
+
+                </details>
+              </div>
+
+            </div>
+
+        </div>
+      </section>
+    </div>
+
+    <div class ="section-container-surface">
+      <section id="open-source">
+        <div class="container">
+          <h2>> Open Source Contributions</h2>
+          <div class="row-cards">
+            <a class="contrib-card" href="https://github.com/grafana/k6-operator/pull/639" target="_blank">
+              <div class="contrib-image">
+                <img src="https://opengraph.githubassets.com/1/grafana/k6-operator" alt="Grafana k6 Operator PR preview">
+              </div>
+              <div class="contrib-content">
+                <h3>$ grafana/k6-operator</h3>
+                <p>(feat): Added <code>logging.development</code> config option to the Helm chart — enables structured JSON logging for better integration with log platforms.<br>Included into the first major release.</p>
+                <!-- <p class="note">✅ Included as part of the -->
+                <!--   <a href="https://github.com/grafana/k6-operator/releases/tag/v1.0.0" target="_blank">v1.0.0 release</a> — the first major milestone of the project. -->
+                <!-- </p> -->
+              </div>
+            </a>
+
+            <a class="contrib-card" href="https://github.com/gopherguides/hype/pull/32" target="_blank">
+              <div class="contrib-image">
+                <img src="https://opengraph.githubassets.com/1/gopherguides/hype" alt="Hype PR preview">
+              </div>
+              <div class="contrib-content">
+                <h3>$ gopherguides/hype</h3>
+                <p>(fix): Concurrency bug in markdown rendering — errors (like duplicate tags or syntax typos) now exit cleanly with proper messages.</p>
+              </div>
+            </a>
+
+            <a class="contrib-card" href="https://github.com/gopherguides/hype/pull/35" target="_blank">
+              <div class="contrib-image">
+                <img src="https://opengraph.githubassets.com/1/gopherguides/hype" alt="Hype PR preview">
+              </div>
+              <div class="contrib-content">
+                <h3>$ gopherguides/hype</h3>
+                <p>(feat): Added <code>-o</code> CLI argument for direct file output — avoids issues with Bash redirection, improving development and CI automation.</p>
+              </div>
+            </a>
+
+            <a class="contrib-card" href="https://github.com/gopherguides/hype/pull/42" target="_blank">
+              <div class="contrib-image">
+                <img src="https://opengraph.githubassets.com/1/gopherguides/hype" alt="Hype PR preview">
+              </div>
+              <div class="contrib-content">
+                <h3>$ gopherguides/hype</h3>
+                <p>(feat): Added snippet support for <code>yaml</code>, <code>sh</code>, <code>.env</code>, extending formats beyond code files.</p>
+              </div>
+            </a>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <section id="blog-posts">
+      <div class="container">
+        <h2>> Blog Posts</h2>
+        <div class="cards">
+          <a class="card" href="https://kristina-pianykh.github.io/blog/posts/backup/">
+            <h3>Hard (drive) adventures</h3>
+            <p class="date">2025-03-06</p>
+            <p>"I clearly remember the feeling of lingering sticky anxiety learning about IT security at the uni. We were given multiple assignments to <em>__hack__</em> things. The hacking part was extremely fun. The realization how easy it can be given enough time and resources was not. Before the course was over, I'd changed all my passwords and set up 2FA wherever possible. The paranoya was real..."</p>
+            <div class="tags">
+              <span>Security</span><span>Linux</span><span>Backup</span>
+            </div>
+          </a>
+          <a class="card" href="https://kristina-pianykh.github.io/blog/posts/shell/">
+            <h3>Go Shell from Scratch</h3>
+            <p class="date">2025-02-20</p>
+            <p>"There are certain things that every programmer must build. Opinions differ about what these are supposed to be but my "bucket list" includes a CPU emulator, a compiler/interpreter, a small operating system, and a shell. I’ve covered an emulator of a RISC-V processor and a very patchy version of an interpreter at the uni but the shell part escaped me. Now, a few years later, I could finally get back to it, only this time I chose to do it in Go..."</p>
+            <div class="tags">
+              <span>Go</span><span>UNIX</span><span>Systems Programming</span>
+            </div>
+          </a>
+          <a class="card" href="https://kristina-pianykh.github.io/blog/posts/learn-your-terminal/">
+            <h3>Learn to love your Terminal</h3>
+            <p class="date"> 2024-10-17</p>
+            <p>"I’m a big fan of CLI tools. There’s something about a terminal emulator that feels so damn special. I still remember the excitement I felt when I edited <code>~/.bashrc</code> for the first time to create a command alias or modify the <code>PATH</code>. The simple commands I entered had an immediate effect and it felt like magic..."</p>
+            <div class="tags">
+              <span>UNIX</span><span>CLI Tools</span><span>Bash</span>
+            </div>
+          </a>
+        </div>
+          <p class="more-link">
+            <a href="https://kristina-pianykh.github.io/blog/" target="_blank">
+              → More posts
+            </a>
+          </p>
+      </div>
+    </section>
+
+    <section id="certificates">
+      <div class="container">
+        <h2>> Certificates</h2>
+        <div class="bullet-list">
+          <ul>
+            <li>
+              <a href="https://www.credly.com/badges/e0819123-694f-453f-8d2a-b1e85041fc7c/linked_in_profile" target="_blank">
+                Terraform Associate (003) | HashiCorp, issued 2024-01-02
+              </a>
+            </li>
+            <li>
+              <a href="https://www.credly.com/badges/91b82dcf-c335-48f8-a9e7-c78cbe5aaf87/linked_in_profile" target="_blank">
+                AWS Solutions Architect – Associate | AWS, issued 2023-09-02
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    </main>
+
+    <footer class="contact" id="contact">
+      <div class="container">
+          <!-- <h2>Contact</h2> -->
+          <div class="contacts">
+            <a class="contact-card" href="https://github.com/Kristina-Pianykh" target="_blank">
+              <svg width="24" height="24" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.19 0 .21.15.46.55.38C13.71 14.53 16 11.54 16 8c0-4.42-3.58-8-8-8z"/>
+              </svg>
+              GitHub
+            </a>
+            <a class="contact-card" href="https://bsky.app/profile/piankris.bsky.social" target="_blank">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                <path d="M19.36 10.04a7.49 7.49 0 00-14.5 1.37A5.505 5.505 0 005.5 19h13a4.5 4.5 0 00.86-8.96z"/>
+              </svg>
+              Bluesky
+            </a>
+            <a class="contact-card" href="mailto:kristinavrnrus@gmail.com">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                <path d="M20 4H4C2.897 4 2 4.897 2 6v12c0 1.103.897 2 2 2h16c1.103 0 2-.897 2-2V6C22 4.897 21.103 4 20 4zM4 6h16l-8 5-8-5zm0 12V8l8 5 8-5v10H4z"/>
+              </svg>
+              Email
+            </a>
+            <a class="contact-card" href="https://www.linkedin.com/in/kristina-pianykh-24492519b/" target="_blank">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"
+                   xmlns="http://www.w3.org/2000/svg">
+                <rect x="2" y="2" width="20" height="20" rx="2"/>
+                <path d="M7 10H10V17H7V10ZM8.5 7C7.7 7 7 6.3 7 5.5C7 4.7 7.7 4 8.5 4C9.3 4 10 4.7 10 5.5C10 6.3 9.3 7 8.5 7ZM14 10H17V11.8C17.5 10.9 18.6 10 20 10C22 10 23 11.3 23 14V17H20V14.5C20 13.7 19.5 13 18.5 13C17.5 13 17 13.7 17 14.5V17H14V10Z" fill="#191724"/>
+              </svg>
+              LinkedIn
+            </a>
+            <a class="contact-card" href="https://kristina-pianykh.github.io/blog/" target="_blank">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                   stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                   xmlns="http://www.w3.org/2000/svg">
+                <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/>
+                <path d="M20 22H6.5A2.5 2.5 0 0 1 4 19.5V4a2 2 0 0 1 2-2h14v20z"/>
+              </svg>
+              Blog
+            </a>
+          </div>
+      </div>
+    </footer>
+  <!-- </div> -->
+  <!-- Vim-style navigation: use j/k to scroll, gg to top, G to bottom -->
+  <script>
+    (function() {
+      let lastKey = '';
+      document.addEventListener('keydown', function(e) {
+        if (['INPUT', 'TEXTAREA'].includes(e.target.tagName)) return;
+        const scrollAmount = window.innerHeight * 0.4;
+        if (e.key === 'j') {
+          window.scrollBy({ top: scrollAmount, behavior: 'smooth' });
+        } else if (e.key === 'k') {
+          window.scrollBy({ top: -scrollAmount, behavior: 'smooth' });
+        } else if (e.key === 'g') {
+          if (lastKey === 'g') {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+            lastKey = '';
+          } else {
+            lastKey = 'g';
+            setTimeout(() => lastKey = '', 500);
+          }
+        } else if (e.key === 'G') {
+          window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
+        }
+      });
+    })();
+  </script>
+</body>
+</html>
