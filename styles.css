@@ -336,13 +336,6 @@ li {
   justify-content: flex-start;
 }
 
-.contacts {
-  display: flex;
-  justify-content: center;
-  gap: 2rem;
-  margin: 2rem 0;
-}
-
 .card {
   display: flex;
   flex-direction: column;
@@ -700,10 +693,10 @@ footer {
   scroll-margin-top: 5rem;  /* so sticky bar won’t overlap */
 }
 
-footer .contacts {
+.contacts {
   display: flex;
   justify-content: center;
-  gap: 2rem;
+  gap: 1rem;
   margin: 0;
 }
 
