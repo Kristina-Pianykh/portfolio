@@ -32,41 +32,77 @@ body {
   font-size: 15px;
   display: flex;
   flex-direction: column;
+  align-items: stretch;
 }
 html {
   scroll-behavior: smooth;
 }
 html, body {
   height: 100%;
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+  box-sizing: border-box;
 }
 
 /* Wrapper for uniform horizontal padding */
 .container {
+  padding-left: 2rem;
+  padding-right: 2rem;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 600px) {
   .container {
     padding-left: 4rem;
     padding-right: 4rem;
   }
 }
 
+@media (min-width: 768px) {
+  .container {
+    padding-left: 5rem;
+    padding-right: 5rem;
+  }
+}
+
+@media (min-width: 1000px) {
+  .container {
+    padding-left: 6rem;
+    padding-right: 6rem;
+  }
+}
+
 @media (min-width: 1200px) {
   .container {
-    padding-left: 12rem;
-    padding-right: 12rem;
+    padding-left: 10rem;
+    padding-right: 10rem;
+  }
+}
+
+@media (min-width: 1400px) {
+  .container {
+    padding-left: 13rem;
+    padding-right: 13rem;
+  }
+}
+
+@media (min-width: 1600px) {
+  .container {
+    padding-left: 17rem;
+    padding-right: 17rem;
   }
 }
 
 @media (min-width: 1800px) {
   .container {
-    padding-left: 25rem;
-    padding-right: 25rem;
+    padding-left: 22rem;
+    padding-right: 22rem;
   }
 }
+
 
 /* Header layout */
 .header-container {
@@ -347,15 +383,13 @@ li {
   display: block;
 }
 
-/* Card Layout */
 .cards {
   display: flex;
   flex-wrap: wrap;
-  gap: 2rem;              /* spacing between cards */
-  justify-content: flex-start; /* align cards to the left */
+  gap: 2rem;
+  justify-content: flex-start;
 }
 
-/* Contacts Row */
 .contacts {
   display: flex;
   justify-content: center;
@@ -363,14 +397,13 @@ li {
   margin: 2rem 0;
 }
 
-/* Section Cards */
 .card {
   display: flex;
   flex-direction: column;
-  /* justify-content: space-between; */
+  flex: 1 1 calc(30% - 4rem);
+  max-width: calc(30% - 4rem);
 
   /* max-width: 350px; */
-  max-width: 27%;
   column-gap: 2rem;
 
   border: var(--border-size) solid transparent;
@@ -385,6 +418,19 @@ li {
   transition: border-color 0.2s ease,
               transform 0.2s ease,
               box-shadow 0.2s ease;
+}
+
+@media (max-width: 1600px) {
+  .card {
+    flex: 1 1 40%;
+    max-width: 40%;
+  }
+}
+@media (max-width: 1000px) {
+  .card {
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
 }
 
 #blog-posts .card {
@@ -451,13 +497,6 @@ li {
   gap: 0.4rem;
 }
 
-/* Mobile: stack cards full width */
-@media (max-width: 768px) {
-  .card {
-    flex: 1 1 100%;
-    max-width: 100%;
-  }
-}
 
 /* Achievements Section Styles */
 .tags {
