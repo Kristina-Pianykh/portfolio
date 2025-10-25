@@ -37,9 +37,9 @@ body {
 }
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 0;
 }
 html, body {
-  height: 100%;
   width: 100%;
   max-width: 100%;
   overflow-x: hidden;
@@ -222,6 +222,10 @@ section {
   flex-direction: column;
   justify-content: flex-start;
   scroll-margin-top: 7rem; /* so nav doesn’t overlap */
+}
+
+#about {
+  scroll-margin-top: 0 !important;
 }
 
 section h2 {
