@@ -433,16 +433,12 @@ li {
   padding-top: 0.5rem;
   display: flex;
   flex-wrap: wrap;
-  gap: 0.4rem;
 }
 
-
-/* Achievements Section Styles */
 .tags {
-  flex-wrap: wrap-reverse;
+  flex-wrap: wrap-reverse !important;
   display: flex;
   flex-wrap: wrap;
-  gap: 0.7rem;
 }
 
 .tags span {
@@ -856,6 +852,25 @@ details[open] .bullet-list {
   gap: 6rem;
 }
 
+@media (max-width: 1000px) {
+  #about .container {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+  }
+
+  .about-container {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  .tip {
+    display: none !important;
+  }
+}
+
 .about-container {
   display: flex;
   justify-content: flex-end;
@@ -954,18 +969,24 @@ details[open] .bullet-list {
 
 p.about-card-white {
   color: var(--color-text);
-  margin: 0.5rem 0;
   font-size: 1rem;
 }
 
 p.about-card-gray {
   color: var(--color-muted);
-  margin: 0.5rem 0;
   font-size: 1rem;
 }
 
 .about-card code {
   color: var(--color-accent);
+}
+
+@media (max-width: 768px) {
+  .about-container-inner  {
+    max-width: 95%;
+  }
+  .about-card {
+    padding: 1.3rem;
 }
 
 .tip {
