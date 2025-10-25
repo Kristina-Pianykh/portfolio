@@ -3,9 +3,71 @@
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Kristina Pianykh</title>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "@id": "https://kristina.pianykh.xyz/#person",
+    "name": "Kristina Pianykh",
+    "url": "https://kristina.pianykh.xyz",
+    "image": "https://kristina.pianykh.xyz/android-chrome-512x512.png",
+    "sameAs": [
+      "https://github.com/kristina-pianykh",
+      "https://www.linkedin.com/in/kristina-pianykh-24492519b/"
+    ],
+    "jobTitle": "Platform Engineer",
+    "worksFor": {
+      "@type": "Organization",
+      "name": "Flink"
+    },
+    "description": "Enable engineers to consistently deliver value to our customers by providing internal tools and processes for automated testing, software quality and observability."
+  }
+  </script>
+
+  <title>Kristina Pianykh — Software Engineer</title>
+  <meta name="description" content="Kristina Pianykh — software engineer passionate about building developer tools that don't suck.">
+  <meta name="keywords" content="Kristina Pianykh, software engineer, developer tools, automation, Neovim, Golang, developer experience">
+  <meta name="author" content="Kristina Pianykh">
+  <meta name="robots" content="index, follow">
+
   <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet"/>
   <link rel="stylesheet" href="styles.css"/>
+
+  <link rel="canonical" href="https://kristina.pianykh.xyz/">
+
+  <!-- Apple Touch Icon -->
+  <link rel="apple-touch-icon" sizes="180x180" href="/static/apple-touch-icon.png">
+
+  <!-- Favicon set -->
+  <link rel="icon" type="image/png" sizes="32x32" href="/static/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/static/favicon-16x16.png">
+  <link rel="shortcut icon" href="/static/favicon.ico">
+
+  <!-- Web manifest -->
+  <link rel="manifest" href="/static/site.webmanifest">
+
+  <!-- Theme & tile colors -->
+  <meta name="theme-color" content="#191724">
+
+  <!-- Optional PWA metadata -->
+  <meta name="application-name" content="Kris Pianykh">
+  <meta name="apple-mobile-web-app-title" content="KrisP">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Kristina Pianykh — Software Engineer">
+  <meta property="og:description" content="Software engineer passionate about building developer tools that don't suck.">
+  <meta property="og:url" content="https://kristina.pianykh.xyz">
+  <meta property="og:image" content="https://kristina.pianykh.xyz/android-chrome-512x512.png">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:image:alt" content="Kristina Pianykh — Software Engineer">
+  <meta property="og:site_name" content="Kristina Pianykh Portfolio">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Kristina Pianykh — Software Engineer">
+  <meta name="twitter:description" content="Software engineer passionate about building developer tools that don't suck.">
+  <meta name="twitter:image" content="https://kristina.pianykh.xyz/android-chrome-512x512.png">
 </head>
 <body>
   <div class="sticky-bar">
@@ -28,7 +90,7 @@
       <!-- LEFT: Photo and name -->
       <div class="profile-left">
         <div class="photo-container">
-          <img src="static/photo.jpg" alt="Kristina Pianykh" class="profile-photo" />
+          <img src="/static/photo.jpg" alt="Kristina Pianykh" class="profile-photo" />
         </div>
         <h1 class="username">kristina_pianykh</h1>
         <!-- <p class="title">Software Engineer</p> -->
@@ -437,6 +499,12 @@
   <!-- </div> -->
   <!-- Vim-style navigation: use j/k to scroll, gg to top, G to bottom -->
   <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('/service-worker.js').catch(err => {
+        console.warn('Service worker registration failed:', err);
+      });
+    }
+
     (function() {
       let lastKey = '';
       document.addEventListener('keydown', function(e) {
@@ -460,5 +528,6 @@
       });
     })();
   </script>
+
 </body>
 </html>
