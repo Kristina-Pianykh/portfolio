@@ -318,7 +318,6 @@ li {
   overflow: hidden;
   border-radius: 50%;
 }
-/* Cropped/Zoomed Profile Photo */
 .profile-photo {
   width: auto;
   height: 100%;
@@ -339,8 +338,8 @@ li {
 .card {
   display: flex;
   flex-direction: column;
-  flex: 1 1 calc(30% - 4rem);
-  max-width: calc(30% - 4rem);
+  flex: 1 1 calc(31% - 3rem);
+  max-width: calc(31% - 3rem);
 
   /* max-width: 350px; */
   column-gap: 2rem;
