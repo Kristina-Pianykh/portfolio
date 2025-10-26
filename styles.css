@@ -378,10 +378,6 @@ li {
   align-content: flex-start;
 }
 
-#blog-posts .card h3 {
-  margin-bottom: 0;
-}
-
 .date {
   margin: 0;
   font-size: 0.85rem;
@@ -404,12 +400,7 @@ li {
   box-shadow: 0 4px 12px rgba(0,0,0,0.3);
 }
 .card p {
-  /* hyphens: auto; */
-  /* overflow-wrap: break-word; */
-  /* flex-grow: 1; */
-  text-align: justify;
   display: block;
-  /* display: flex; */
   justify-content: flex-start;
 }
 
@@ -522,7 +513,6 @@ body {
   gap: 2rem;
 }
 
-/* === Unified workplace + OSS card base === */
 .workplace-card,
 .contrib-card {
   border: var(--border-size) solid transparent;
@@ -544,7 +534,7 @@ body {
 }
 
 .workplace-card {
-  padding: 1.5rem;
+  padding: 1.6rem 1.8rem;
   align-items: flex-start;
   border-color: var(--color-highlight-md);
   background-color: var(--color-base);
@@ -572,6 +562,7 @@ body {
 }
 
 .contrib-content {
+  gap: 1rem;
   flex: 1;
   display: flex;
   flex-direction: column;
@@ -582,22 +573,11 @@ body {
   .contrib-card {
     flex-direction: column;
   }
-  .contrib-content {
-    padding: 1.2rem;
-  }
   .contrib-image {
     max-width: 100%;
   }
 }
 
-/* /* 4️⃣ Slight hover consistency */ */
-/* .workplace-card:hover, */
-/* .contrib-card:hover { */
-/*   background-color: #26233a; */
-/*   transform: translateY(-2px); */
-/* } */
-
-/* 5️⃣ Keep internal .cards aligned inside workplace cards */
 .workplace-card .cards {
   margin-top: 1.2rem;
   margin-right: 0;
@@ -610,21 +590,6 @@ body {
   justify-content: flex-start;
 }
 
-/* .contrib-content h3 { */
-/*   display: flex; */
-/*   justify-content: flex-start; */
-/*   /* margin: 0 0 0.5rem; */ */
-/*   color: var(--color-rose); */
-/*   font-weight: 500; */
-/* } */
-
-/* h3 { */
-/*   display: flex; */
-/*   justify-content: flex-start; */
-/*   font-weight: 400; */
-/*   color: var(--color-highlight); */
-/* } */
-
 summary h3 {
   font-weight: var(--title-font-weight);
   color: var(--color-highlight);
@@ -635,6 +600,7 @@ summary .workplace-header h3,
 .workplace-card h3,
 .card h3,
 .contrib-card h3 {
+  margin: 0;
   display: flex;
   justify-content: flex-start;
   font-weight: var(--title-font-weight);
@@ -657,25 +623,6 @@ summary .workplace-header h3,
 .contrib-content a:focus,
 .contrib-content a:visited {
   text-decoration: none;
-}
-
-/* .contrib-content a:hover { */
-/*   color: #f6c177; */
-/* } */
-
-/* .contrib-content .note { */
-/*   margin-top: 0.5rem; */
-/*   font-size: 0.9rem; */
-/*   color: #908caa; /* muted gray */ */
-/* } */
-
-.contrib-content .note a {
-  color: #286983;
-  text-decoration: none;
-}
-
-.contrib-content .note a:hover {
-  color: #f6c177; /* gold on hover */
 }
 
 /* Footer */
@@ -711,7 +658,6 @@ footer {
   text-decoration: underline;
 }
 
-/* subtle slide-in animation */
 details[open] .cards {
   animation: fadeIn 0.3s ease;
 }
@@ -721,11 +667,11 @@ details[open] .cards {
   to { opacity: 1; transform: translateY(0); }
 }
 
-/* 6️⃣ Responsive fallback: stack full width */
 @media (max-width: 768px) {
   .workplace-card,
   .contrib-card {
     padding: 1.2rem 1.2rem;
+    gap: 1rem;
   }
 }
 
