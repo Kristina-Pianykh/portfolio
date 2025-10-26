@@ -543,7 +543,6 @@ body {
   background-color: var(--color-surface);
 }
 
-/* === Workplace cards === */
 .workplace-card {
   padding: 1.5rem;
   align-items: flex-start;
@@ -759,6 +758,11 @@ summary p a {
   margin-top: 0;
   font-size: 0.9rem;
   color: var(--color-subtle);
+
+  letter-spacing: 0.3px;
+  margin: 0.1rem 0 0.4rem;
+  /* border-bottom: 1px dashed var(--color-highlight-md); */
+  /* padding-bottom: 0.3rem; */
 }
 
 summary p.subtle a {
@@ -801,6 +805,7 @@ summary p.subtle a {
 .bullet-list li {
   position: relative;
   color: var(--color-text);
+  opacity: 0.9;
   font-size: 0.95rem;
   line-height: 1.6;
 }
