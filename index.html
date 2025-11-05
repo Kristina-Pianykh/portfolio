@@ -527,6 +527,20 @@
         }
       });
     })();
+
+  // Collapse details on wokrplace-card click
+  document.addEventListener("click", (e) => {
+    const card = e.target.closest(".workplace-card");
+    if (!card) return;
+
+    // Don't toggle if clicking a real interactive element
+    if (e.target.closest("a, button, summary")) return;
+
+    const details = card.querySelector("details");
+    if (!details) return;
+
+    details.open = !details.open;
+  });
   </script>
 
 </body>

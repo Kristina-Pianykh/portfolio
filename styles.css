@@ -395,6 +395,7 @@ li {
 .contrib-card {
   position: relative;
   z-index: 1;
+  cursor: pointer;
 }
 
 /* Love border hover effect */
@@ -614,6 +615,10 @@ summary .workplace-header h3,
   color: var(--color-highlight);
 }
 
+.workplace-card summary .workplace-header {
+  padding-right: 1.5rem;
+}
+
 .workplace-card:hover h3,
 .card:hover h3,
 .contrib-card:hover h3 {
@@ -687,11 +692,36 @@ details[open] .cards {
 }
 
 .workplace-card summary {
+  position: relative;
   display: flex;
   flex-direction: column;
   gap: 1rem;
-  cursor: pointer;
   list-style: none;
+}
+
+/* chevron (drawn with borders) */
+.workplace-card summary::after {
+  content: "";
+  position: absolute;
+  top: 0.4rem;
+  right: 0;
+  width: 0.5rem;
+  height: 0.5rem;
+  border-right: 2px solid var(--color-subtle);
+  border-bottom: 2px solid var(--color-subtle);
+  transform: rotate(-45deg);            /* ► */
+  transition: transform 200ms ease, border-color 200ms ease;
+  pointer-events: none;
+}
+
+/* hover/focus color hint */
+.workplace-card:hover summary::after {
+  border-color: var(--color-rose);
+}
+
+/* rotate when open */
+.workplace-card details[open] summary::after {
+  transform: rotate(45deg);             /* ▼ */
 }
 
 .workplace-card summary title {
