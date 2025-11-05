@@ -340,6 +340,7 @@ li {
   flex-direction: column;
   flex: 1 1 calc(31% - 3rem);
   max-width: calc(31% - 3rem);
+  position: relative;
 
   /* max-width: 350px; */
   column-gap: 2rem;
@@ -377,6 +378,12 @@ li {
   align-content: flex-start;
 }
 
+.card .card-cover {
+  position: absolute;
+  inset: 0;
+  z-index: 1; /* below visible content */
+}
+
 .date {
   margin: 0;
   font-size: 0.85rem;
@@ -407,6 +414,7 @@ li {
   font-size: 0.9rem;
   color: #908caa;     /* muted gray */
   margin-bottom: 0.5rem;
+  z-index: 2;
 }
 
 .card .note a {
