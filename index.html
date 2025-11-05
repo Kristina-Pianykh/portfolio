@@ -249,9 +249,13 @@
 
                   <div class="bullet-list">
                     <ul>
-                      <li>Built an internal platform for distributed load testing Grafana’s <a style="text-decoration: underline;" href="https://k6.io/" target="_blank"><code>k6</code></a> within Kubernetes. It helps our teams simulate realistic HTTP and gRPC traffic patterns, track latency against SLOs, and catch performance issues early. I integrated a new HTMX-based web interface into our existing Flask portal, making it easy to configure and launch tests directly from the browser without requiring direct CLI or API interaction.</li>
-                      <li>Introduced resource governance for Kubernetes workloads with Resource Quotas and Limit Ranges to ensure fair resource allocation, stable performance, and no noisy neighbours.</li>
-                      <li>Moderated recurring cross-team meetings as part of the <em><em>Keep the Lights On</em></em> initiative focused on incident and postmortem reviews. Coordinated with engineers and incident owners to ensure thorough follow-ups, effective knowledge sharing, and a constructive, blame-free discussion culture that improves system reliability and observability.</li>
+                      <li>Built a distributed load-testing platform around Grafana <a style="text-decoration: underline;" href="https://k6.io/" target="_blank"><code>k6</code></a> on Kubernetes to simulate realistic HTTP/gRPC traffic and measure latency against SLOs.</li>
+                      <li>Built an HTMX-based web interface integrated into the existing Flask portal to configure and launch load tests from the browser.</li>
+                      <li>Introduced centralized resource governance for Kubernetes workloads to ensure fair resource allocation and stable performance.</li>
+                      <li>Moderated cross-team meetings as part of the <em><em>Keep the Lights On</em></em> initiative focused on incident and postmortem reviews, fostering a constructive, blame-free discussion culture.</li>
+                      <!-- <li>Built an internal platform for distributed load testing Grafana’s <a style="text-decoration: underline;" href="https://k6.io/" target="_blank"><code>k6</code></a> within Kubernetes. It helps our teams simulate realistic HTTP and gRPC traffic patterns, track latency against SLOs, and catch performance issues early. I integrated a new HTMX-based web interface into our existing Flask portal, making it easy to configure and launch tests directly from the browser without requiring direct CLI or API interaction.</li> -->
+                      <!-- <li>Introduced resource governance for Kubernetes workloads with Resource Quotas and Limit Ranges to ensure fair resource allocation, stable performance, and no noisy neighbours.</li> -->
+                      <!-- <li>Moderated recurring cross-team meetings as part of the <em><em>Keep the Lights On</em></em> initiative focused on incident and postmortem reviews. Coordinated with engineers and incident owners to ensure thorough follow-ups, effective knowledge sharing, and a constructive, blame-free discussion culture that improves system reliability and observability.</li> -->
                     </ul>
                     <div class="tags">
                       <span>Go</span><span>Python</span><span>Kubernetes</span><span>GCP</span><span>Helm</span><span>ArgoCD</span><span>HTMX</span><span>Docker</span><span>DataDog</span>
@@ -286,8 +290,9 @@
                       <li>Optimized the costs of CI/CD pipelines on GitHub by setting up cache, leading to a 90% decrease in billable time.</li>
                       <li>Built a load testing service in Python that generated realistic test data to emulate user traffic peaks at scheduled times.</li>
                       <li>Built an automated key rotation and notification service on AWS to eliminate manual credential management and reduce operational risk.</li>
-                      <li>Designed, implemented, and automated the infrastructure for an AI assistant on Microsoft Azure using <code>Terraform</code> for Infrastructure as Code and GitHub Workflows/BitBucket Pipeline for continuous delivery.</li>
-                      <li>Led workshops on coding standards and secure development practices, enabling teams to adopt tools such as <code>uv</code>, <code>Poetry</code>, <code>mypy</code>, and <code>Ruff</code>, and to apply proper secret management in Dockerized environments.</li>
+                      <li>Designed and built the infrastructure for an AI assistant on Microsoft Azure using <code>Terraform</code> for Infrastructure as Code and GitHub Workflows/BitBucket Pipeline for continuous delivery.</li>
+                      <li>Led workshops on coding standards (e.g to drive modern tool adoption) and secure development practices (e.g. secret management in Dockerized environments).</li>
+                      <!-- <li>Led workshops on coding standards and secure development practices, enabling teams to adopt tools such as <code>uv</code>, <code>Poetry</code>, <code>mypy</code>, and <code>Ruff</code>, and to apply proper secret management in Dockerized environments.</li> -->
                     </ul>
                     <div class="tags">
                       <span>Python</span><span>IaC</span><span>Terraform</span><span>Docker</span><span>AWS</span><span>CI/CD</span><span>Microsoft Azure</span><span>BitBucket</span></span>
@@ -452,29 +457,17 @@
       <div class="container">
           <!-- <h2>Contact</h2> -->
           <div class="contacts">
-            <a class="contact-card" href="https://github.com/Kristina-Pianykh" target="_blank">
-              <svg width="24" height="24" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                <path fill-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.19 0 .21.15.46.55.38C13.71 14.53 16 11.54 16 8c0-4.42-3.58-8-8-8z"/>
-              </svg>
-              GitHub
-            </a>
-            <a class="contact-card" href="https://bsky.app/profile/piankris.bsky.social" target="_blank" aria-label="Bluesky">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 640 640"
-                fill="currentColor"
-                width="24"
-                height="24"
-              >
-                <path d="M439.8 358.7C436.5 358.3 433.1 357.9 429.8 357.4C433.2 357.8 436.5 358.3 439.8 358.7zM320 291.1C293.9 240.4 222.9 145.9 156.9 99.3C93.6 54.6 69.5 62.3 53.6 69.5C35.3 77.8 32 105.9 32 122.4C32 138.9 41.1 258 47 277.9C66.5 343.6 136.1 365.8 200.2 358.6C203.5 358.1 206.8 357.7 210.2 357.2C206.9 357.7 203.6 358.2 200.2 358.6C106.3 372.6 22.9 406.8 132.3 528.5C252.6 653.1 297.1 501.8 320 425.1C342.9 501.8 369.2 647.6 505.6 528.5C608 425.1 533.7 372.5 439.8 358.6C436.5 358.2 433.1 357.8 429.8 357.3C433.2 357.7 436.5 358.2 439.8 358.6C503.9 365.7 573.4 343.5 593 277.9C598.9 258 608 139 608 122.4C608 105.8 604.7 77.7 586.4 69.5C570.6 62.4 546.4 54.6 483.2 99.3C417.1 145.9 346.1 240.4 320 291.1z"/>
-              </svg>
-              Bluesky
-            </a>
             <a class="contact-card" href="mailto:kristinavrnrus@gmail.com">
               <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                 <path d="M20 4H4C2.897 4 2 4.897 2 6v12c0 1.103.897 2 2 2h16c1.103 0 2-.897 2-2V6C22 4.897 21.103 4 20 4zM4 6h16l-8 5-8-5zm0 12V8l8 5 8-5v10H4z"/>
               </svg>
               Email
+            </a>
+            <a class="contact-card" href="https://github.com/Kristina-Pianykh" target="_blank">
+              <svg width="24" height="24" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.19 0 .21.15.46.55.38C13.71 14.53 16 11.54 16 8c0-4.42-3.58-8-8-8z"/>
+              </svg>
+              GitHub
             </a>
             <a class="contact-card" href="https://www.linkedin.com/in/kristina-pianykh-24492519b/" target="_blank">
               <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"
@@ -492,6 +485,18 @@
                 <path d="M20 22H6.5A2.5 2.5 0 0 1 4 19.5V4a2 2 0 0 1 2-2h14v20z"/>
               </svg>
               Blog
+            </a>
+            <a class="contact-card" href="https://bsky.app/profile/piankris.bsky.social" target="_blank" aria-label="Bluesky">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 640 640"
+                fill="currentColor"
+                width="24"
+                height="24"
+              >
+                <path d="M439.8 358.7C436.5 358.3 433.1 357.9 429.8 357.4C433.2 357.8 436.5 358.3 439.8 358.7zM320 291.1C293.9 240.4 222.9 145.9 156.9 99.3C93.6 54.6 69.5 62.3 53.6 69.5C35.3 77.8 32 105.9 32 122.4C32 138.9 41.1 258 47 277.9C66.5 343.6 136.1 365.8 200.2 358.6C203.5 358.1 206.8 357.7 210.2 357.2C206.9 357.7 203.6 358.2 200.2 358.6C106.3 372.6 22.9 406.8 132.3 528.5C252.6 653.1 297.1 501.8 320 425.1C342.9 501.8 369.2 647.6 505.6 528.5C608 425.1 533.7 372.5 439.8 358.6C436.5 358.2 433.1 357.8 429.8 357.3C433.2 357.7 436.5 358.2 439.8 358.6C503.9 365.7 573.4 343.5 593 277.9C598.9 258 608 139 608 122.4C608 105.8 604.7 77.7 586.4 69.5C570.6 62.4 546.4 54.6 483.2 99.3C417.1 145.9 346.1 240.4 320 291.1z"/>
+              </svg>
+              Bluesky
             </a>
           </div>
       </div>
