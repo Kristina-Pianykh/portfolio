@@ -235,7 +235,6 @@ section h2 {
   font-weight: 600;
 }
 
-/* Lists */
 ul {
   list-style: none;
   padding-left: 1rem;
@@ -244,59 +243,49 @@ li {
   margin-bottom: 0.5rem;
 }
 
-/* Icons */
 .contact-card {
-  line-height: 1;
   display: inline-flex;
-  align-items: center;    /* keeps icon + text vertically centered */
-  gap: 0.5rem;               /* space between icon and text */
-  background-color: var(--color-surface);
+  align-items: center;
+  background-color: inherit;
+  border-color: var(--color-highlight-md);
+
   color: var(--color-subtle);
   padding: 0.5rem 1rem;
   border-radius: var(--border-radius);
   text-decoration: none;
-  font-size: 16px;
   transition: transform 0.2s, background-color 0.2s;
 }
 
 .contact-card svg {
-  width: 1.2em;             /* scale with font size */
-  height: 1.2em;
+  width: 1.5em;
+  height: 1.5em;
   flex-shrink: 0;
-  display: inline-block;         /* removes inline misalignment */
+  display: inline-block;
   vertical-align: middle;  /* makes sure text baseline doesn’t pull text lower */
   position: relative;
-  top: 0.05em;             /* adjust fine offset if needed */
+  top: 0.05em;
+  pointer-events: none; /* avoid duplicate tooltips */
 }
 
 .contact-card:hover {
   transform: translateY(-2px);
   background-color: var(--color-highlight-low);
-  color: var(--color-love);
-  border-color: var(--color-love); /* rose border */
-  /* transform: translateY(-2px); */
-  box-shadow: 0 0 0 1px var(--color-love);
+  color: var(--color-foam);
+  border-color: var(--color-foam);
+  box-shadow: 0 0 0 1px var(--color-foam);
+
+  /* border-color: var(--color-love); */
+  /* color: var(--color-love); */
+  /* box-shadow: 0 0 0 1px var(--color-love); */
 }
 
-@media (max-width: 850px) {
-  /* Hide the text labels, keep only the icons */
+@media (max-width: 480px) {
+  .contacts {
+    gap: 0rem;
+  }
   .contact-card {
-    padding: 0.6rem;
+    padding: 0.8rem;
     justify-content: center;
-  }
-
-  .contact-card svg {
-    width: 1.6rem;
-    height: 1.6rem;
-  }
-
-  /* Hide any text that follows the SVG (the labels) */
-  .contact-card {
-    font-size: 0; /* hides text without affecting accessibility */
-  }
-
-  .contact-card svg {
-    font-size: initial; /* reset icon scaling */
   }
 }
 
@@ -650,7 +639,7 @@ footer {
 .contacts {
   display: flex;
   justify-content: center;
-  gap: 1rem;
+  gap: 0.1rem;
   margin: 0;
 }
 
@@ -866,6 +855,9 @@ details[open] .bullet-list {
 }
 
 .about-container-inner {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
   max-width: 70%;
 }
 
@@ -979,7 +971,6 @@ p.about-card-gray {
 }
 
 .tip {
-  margin-top: 1.8rem;
   font-size: 0.85rem;
   color: var(--color-subtle);
   background-color: var(--color-overlay);
