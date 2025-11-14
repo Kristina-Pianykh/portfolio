@@ -997,3 +997,17 @@ p.about-card-gray {
     gap: 1rem;
   }
 }
+
+.nav-cv {
+  color: var(--color-accent) !important;
+  border-color: var(--color-accent) !important;
+  display: inline-flex;
+  align-items: center;   /* vertically center text + icon */
+  gap: 0.35rem;          /* spacing between “CV” and icon */
+}
+
+.nav-cv:hover {
+  color: var(--color-base) !important;
+  border-color: var(--color-base) !important;
+  background-color: var(--color-accent) !important;
+}
