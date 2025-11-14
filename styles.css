@@ -649,6 +649,9 @@ footer {
 }
 
 .more-link a {
+  gap: 0.4rem;
+  display: inline-flex;
+  align-items: center;   /* vertically center text + icon */
   color: var(--color-accent);
   font-weight: 500;
   transition: color 0.2s ease;
