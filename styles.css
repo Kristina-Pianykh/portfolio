@@ -22,6 +22,26 @@
   --title-font-weight: 500;
 }
 
+:root.light {
+  /* Color Palette */
+  /* Rosé Pine colors */
+  --color-base: #faf4ed;
+  --color-text: #575279;
+  --color-subtle: #797593;
+  --color-gold: #ea9d34;
+  --color-highlight: #286983;
+  --color-overlay: #f2e9e1;
+  --color-surface: #fffaf3;
+  --color-accent: #907aa9;
+  --color-rose: #d7827e;
+  --color-love: #b4637a;
+  --color-foam: #56949f;
+  --color-muted: #9893a5;
+  --color-highlight-md: #dfdad9;
+  --color-highligh-low: #f4ede8;
+  --color-highlight-md-alt: #dfdad9;
+}
+
 /* Base */
 body {
   margin: 0;
@@ -182,6 +202,80 @@ nav a.active {
   border-color: var(--color-love);
   background-color: var(--color-highlight-low);
 }
+
+/* Wrapper keeps icon + toggle aligned vertically */
+.theme-toggle-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;          /* spacing between icon and toggle */
+  margin-left: 0.8rem;  /* breathing room from CV button */
+}
+
+/* Style the icon */
+.theme-toggle-icon {
+  fill: var(--color-subtle);
+  width: 18px;
+  height: 18px;
+  transition: fill 0.3s ease;
+}
+
+html.light .theme-toggle-icon {
+  fill: var(--color-love);  /* cute rose in light mode */
+}
+
+/* Toggle container */
+.switch {
+  position: relative;
+  width: 42px;
+  height: 22px;      /* matches nav button height visually */
+  display: flex;
+  align-items: center;
+}
+
+/* Hide native checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* Track */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  inset: 0;
+  background-color: var(--color-muted);
+  border-radius: 30px;
+  transition: background-color 0.25s ease;
+}
+
+/* Thumb */
+.slider::before {
+  content: "";
+  position: absolute;
+  height: 16px;
+  width: 16px;
+  left: 3px;
+  top: 3px;
+  background-color: var(--color-surface);
+  border-radius: 50%;
+  transition: transform 0.25s ease, background-color 0.25s ease;
+}
+
+/* Light mode ON */
+input:checked + .slider {
+  background-color: var(--color-accent);
+}
+
+input:checked + .slider::before {
+  transform: translateX(20px);
+}
+
+/* Hover icon follows theme accent */
+.theme-toggle-wrapper:hover .theme-toggle-icon {
+  fill: var(--color-accent);
+}
+
 /* Main */
 main {
   flex: 1; /* takes up all remaining vertical space */
@@ -409,7 +503,7 @@ li {
 }
 
 .card .note a {
-  color: #c4a7e7;     /* Rosé Pine lavender */
+  color: var(--color-accent);
   text-decoration: none;
 }
 
@@ -432,7 +526,7 @@ li {
 
 .tags span {
   margin-top: 1.3rem;
-  background-color: rgba(48, 45, 65, 0.7); /* softer grey with transparency */
+  background-color: var(--color-overlay);
   color: var(--color-subtle);
   padding: 0.2rem 0.5rem;
   border-radius: 4px;
@@ -473,7 +567,7 @@ li {
   top: 0;
   left: 0;
   right: 0;
-  background-color: rgba(25, 23, 36, 0.95); /* Rosé Pine base, semi-transparent */
+  background-color: var(--color-base);
   backdrop-filter: blur(8px);
   border-bottom: 1px solid var(--color-highlight-md);
   box-shadow: 0 2px 10px rgba(235, 188, 186, 0.08); /* soft rose glow */
@@ -485,6 +579,7 @@ li {
 .sticky-bar nav {
   display: flex;
   justify-content: flex-end; /* push links to the right */
+  align-items: center;
   gap: 1rem;
 }
 
@@ -629,8 +724,8 @@ summary .workplace-header h3,
 
 /* Footer */
 footer {
-  background-color: #1f1d2e;
-  border-top: 2px solid #26233a;
+  background-color: var(--color-surface);
+  border-top: 2px solid var(--color-overlay);
   text-align: center;
   flex-shrink: 0;
   scroll-margin-top: 5rem;  /* so sticky bar won’t overlap */
