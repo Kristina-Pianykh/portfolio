@@ -4,28 +4,48 @@
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Person",
-    "@id": "https://kristina.pianykh.xyz/#person",
-    "name": "Kristina Pianykh",
-    "url": "https://kristina.pianykh.xyz",
-    "image": "https://kristina.pianykh.xyz/android-chrome-512x512.png",
-    "sameAs": [
-      "https://github.com/kristina-pianykh",
-      "https://www.linkedin.com/in/kristina-pianykh-24492519b/"
-    ],
-    "jobTitle": "Platform Engineer",
-    "worksFor": {
-      "@type": "Organization",
-      "name": "Flink"
+  [
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "@id": "https://kristina.pianykh.xyz/#person",
+      "name": "Kristina Pianykh",
+      "url": "https://kristina.pianykh.xyz",
+      "image": "https://kristina.pianykh.xyz/android-chrome-512x512.png",
+      "alternateName": ["Kris Pianykh", "kristina pianykh"],
+      "sameAs": [
+        "https://github.com/kristina-pianykh",
+        "https://www.linkedin.com/in/kristina-pianykh-24492519b/",
+        "https://www.linkedin.com/in/kristina-pianykh-24492519b/"
+        "https://www.credly.com/users/kristina-pianykh/badges#credly",
+        "https://stackoverflow.com/users/24128925/kristina-pianykh",
+        "https://bsky.app/profile/piankris.bsky.social",
+        "https://kristina-pianykh.github.io/blog/"
+      ],
+      "jobTitle": "Platform Engineer",
+      "worksFor": {
+        "@type": "Organization",
+        "name": "Flink"
+      },
+      "description": "Enable engineers to consistently deliver value to our customers by providing internal tools and processes for automated testing, software quality and observability."
     },
-    "description": "Enable engineers to consistently deliver value to our customers by providing internal tools and processes for automated testing, software quality and observability."
-  }
+    {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://kristina.pianykh.xyz/"
+      }
+    ]
+    }
+  ]
   </script>
 
-  <title>Kristina Pianykh — Software Engineer</title>
-  <meta name="description" content="Kristina Pianykh — software engineer passionate about building developer tools that don't suck. Backed by a Computer Science degree and 5+ in cloud infrastructure, automation, and backend development.">
+  <title>Kristina Pianykh — Software Engineer | Official Website</title>
+  <meta name="description" content="Official website of Kristina Pianykh — Berlin based software engineer passionate about building developer tools that don't suck. Backed by a Computer Science degree and 5+ in cloud infrastructure, automation, and backend development.">
   <meta name="keywords" content="Kristina Pianykh, software engineer, developer tools, automation, Neovim, Golang, developer experience">
   <meta name="author" content="Kristina Pianykh">
   <meta name="robots" content="index, follow">
@@ -63,6 +83,8 @@
   <meta property="og:locale" content="en_US">
   <meta property="og:image:alt" content="Kristina Pianykh — Software Engineer">
   <meta property="og:site_name" content="Kristina Pianykh Portfolio">
+  <meta property="profile:first_name" content="Kristina">
+  <meta property="profile:last_name" content="Pianykh">
 
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Kristina Pianykh — Software Engineer">
@@ -99,7 +121,9 @@
         <div class="photo-container">
           <img src="/static/photo.jpg" alt="Kristina Pianykh Profile Photo" class="profile-photo" />
         </div>
-        <h1 class="username">kristina_pianykh</h1>
+        <h1 class="visually-hidden">Kristina Pianykh</h1>
+        <h2 class="visually-hidden">Portfolio and personal website of software engineer Kristina Pianykh</h2>
+        <h1 aria-hidden="true" class="username">kristina_pianykh</h1>
         <!-- <p class="title">Software Engineer</p> -->
         <!-- <p class="company">@ Flink</p> -->
         <p class="role">Software Engineer @ Flink</p>
@@ -502,7 +526,10 @@
     </section>
     </main>
 
-    <footer class="contact" id="contact">
+    <footer id="footer">
+      <div class="container">
+        <p class="footer">© 2025 Kristina Pianykh</p>
+      </div>
     </footer>
 
   <!-- Vim-style navigation: use j/k to scroll, gg to top, G to bottom -->
