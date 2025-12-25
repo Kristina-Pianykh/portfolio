@@ -590,6 +590,15 @@ li {
 }
 
 @media (max-width: 1300px) {
+  body {
+    padding-top: 0;
+  }
+
+  #about, .profile-header {
+    min-height: auto;
+    padding-top: 2rem;
+  }
+
   .sticky-bar {
     display: none;
   }
